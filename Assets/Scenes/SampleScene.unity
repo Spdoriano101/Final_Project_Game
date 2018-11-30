@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bb25cbd47a9e44199fc6a5afe1f819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   jumpSpeed: 10
   physicsBody: {fileID: 1369498680}
   horizontalAxis: Horizontal
