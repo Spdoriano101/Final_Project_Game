@@ -58,6 +58,10 @@ public class Elane : MonoBehaviour {
             playerSprite.flipX = false;
         }
 
+
+        //Animation for the animator scroipt
+        playerAnimator.SetFloat("Walk", Mathf.Abs(leftRight));
+
         // Jumping
 
         //Detect if we are touching the ground
