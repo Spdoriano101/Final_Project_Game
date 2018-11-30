@@ -14,7 +14,7 @@ public class Elane : MonoBehaviour {
     public string horizontalAxis = "Horizontal";
     public string jumpButton = "Jump";
 
-
+    
     public Animator playerAnimator;
     public SpriteRenderer playerSprite;
     public Collider2D playerCollider;
