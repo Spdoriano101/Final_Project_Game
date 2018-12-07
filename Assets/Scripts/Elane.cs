@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Elane : MonoBehaviour {
    
     // designer variables
-    public float speed = 2;
+    public float speed = 7;
     public float jumpSpeed = 10;
     public Rigidbody2D physicsBody;
     public string horizontalAxis = "Horizontal";
