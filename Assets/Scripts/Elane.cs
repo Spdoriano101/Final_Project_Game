@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Extra using statement to allow us to use the scene management functions
+// Extra using statement to allow the use scene management functions
 using UnityEngine.SceneManagement;
 
 public class Elane : MonoBehaviour {
@@ -25,7 +25,7 @@ public class Elane : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 
@@ -42,13 +42,15 @@ public class Elane : MonoBehaviour {
         // Calculate velocity
         Vector2 velocity = direction * speed;
 
+        // preserve vertical velocity from physics
+        velocity.y = physicsBody.velocity.y;
 
         // Give the velocity to the rigidbody
         physicsBody.velocity = velocity;
 
 
 
-        //Flip our sprite if we're moving backwards
+        //Flip the sprite when moving backwards/opposite way
         if (velocity.x < 0)
         {
             playerSprite.flipX = true;
@@ -59,22 +61,24 @@ public class Elane : MonoBehaviour {
         }
 
 
-        //Animation for the animator scroipt
+        //Animation for the animator script
         playerAnimator.SetFloat("Walk", Mathf.Abs(leftRight));
 
         // Jumping
 
-        //Detect if we are touching the ground
+        //Detect sprite touching the ground
         //Get the LayerMask from Unity using the name of the layer
         LayerMask groundLayerMask = LayerMask.GetMask("Ground");
 
-        //Ask the player's collider if we are touchign the LayerMask
+        //Ask the player's collider if it is touching the LayerMask
         bool touchingGround = playerCollider.IsTouchingLayers(groundLayerMask);
 
+        //Detects input of jump button
         bool jumpButtonPressed = Input.GetButtonDown(jumpButton);
+
         if (jumpButtonPressed == true && touchingGround == true)
         {
-            //We have pressed Jump so we should set our upward velocity to our jumpSpeed
+            //pressed Jump so should set upward velocity to jumpSpeed
             velocity.y = jumpSpeed;
 
             //Give the velocity to the rigidbody
