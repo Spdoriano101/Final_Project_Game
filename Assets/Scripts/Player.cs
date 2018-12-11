@@ -5,7 +5,7 @@ using UnityEngine;
 // Extra using statement to allow the use scene management functions
 using UnityEngine.SceneManagement;
 
-public class Elane : MonoBehaviour {
+public class Player : MonoBehaviour {
    
     // designer variables
     public float speed = 7;
@@ -85,5 +85,17 @@ public class Elane : MonoBehaviour {
             physicsBody.velocity = velocity;
         }
 
+        }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check the thing we bump into is an enemy
+        if (collision.collider.GetComponent<Enemy>())
+        {
+            // die
+            Destroy(gameObject);
+        }
     }
-    }
+
+}

@@ -31,7 +31,7 @@ public class Coin : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Check if the thing we touched was the player 
-        Elane playerScript = collision.collider.GetComponent<Elane>();
+        Player playerScript = collision.collider.GetComponent<Player>();
 
         //If the thing we touched HA a player script, hat means
         //it IS a player, so....
