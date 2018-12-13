@@ -5,13 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour {
 
 
-    //Variable to let us add to the score
-    // Public so we can drag and drop
-    public Score scoreObject;
-
-    //Variable to ghold the coin's point value 
-    //Public so we can change it in the editor 
-    public int coinValue;
+   
 
 
     // Use this for initialization
@@ -26,24 +20,19 @@ public class Coin : MonoBehaviour {
 
     }
 
-    //Unity calls this funstion when our coin touches any other object 
-    // If the player touched us, the coin should vanish and the score should increase
+    //Unity calls this function when coin touches any other object in the game
+    // If the player touched the coin, it should vanish and the score should increase
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Check if the thing we touched was the player 
         Player playerScript = collision.collider.GetComponent<Player>();
 
-        //If the thing we touched HA a player script, hat means
-        //it IS a player, so....
+        //If the player collides with an object or asset(s) that 
+        //Have a playerscript attached to it
         if (playerScript)
         {
-
-            //We hit the player
-
-
-            //Add to the score based on our value
-            scoreObject.Addscore(coinValue);
-
+            
+            Score.scoreValue += 10;
             // Destroy the gameObject that this script is attracted to
             // (the coin) 
 
