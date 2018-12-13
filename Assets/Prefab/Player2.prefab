@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4516128892995126}
   - component: {fileID: 212517210150213544}
   - component: {fileID: 50469284202682084}
+  - component: {fileID: 114530458779424378}
   - component: {fileID: 70743616295221510}
   - component: {fileID: 114869086497665602}
   - component: {fileID: 95588491326777250}
@@ -97,6 +98,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114530458779424378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780540419874712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16cdcbdefa9eb2145925864a33f7c6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 4516128892995126}
+  cameraDistance: 30
 --- !u!114 &114869086497665602
 MonoBehaviour:
   m_ObjectHideFlags: 1

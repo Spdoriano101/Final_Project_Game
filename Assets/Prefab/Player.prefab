@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4755133781668058}
   - component: {fileID: 114442331362871520}
   - component: {fileID: 212015712366815556}
+  - component: {fileID: 114905292725529758}
   - component: {fileID: 50575743316740786}
   - component: {fileID: 95130308969862446}
   - component: {fileID: 70920583633907068}
@@ -116,6 +117,19 @@ MonoBehaviour:
   playerAnimator: {fileID: 95130308969862446}
   playerSprite: {fileID: 212015712366815556}
   playerCollider: {fileID: 70920583633907068}
+--- !u!114 &114905292725529758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477163548942304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16cdcbdefa9eb2145925864a33f7c6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 4755133781668058}
+  cameraDistance: 30
 --- !u!212 &212015712366815556
 SpriteRenderer:
   m_ObjectHideFlags: 1

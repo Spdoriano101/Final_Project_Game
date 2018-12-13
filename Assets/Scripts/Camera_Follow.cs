@@ -6,23 +6,23 @@ public class Camera_Follow : MonoBehaviour {
 
 
     public Transform followTarget;
+    public float cameraDistance = 30.0f;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (followTarget != null)
-        {
-            Vector3 newPosition = followTarget.position;
-            newPosition.z = transform.position.z;
-            transform.position = newPosition;
+
+    void Awake()
+    {
+        GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height / 2) / cameraDistance);
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+
+    {
+
+        transform.position = new Vector3(followTarget.position.x, followTarget.position.y, transform.position.z);
 
         }
     }
-}
+
 
 
 

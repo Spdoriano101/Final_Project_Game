@@ -26,6 +26,7 @@ public class Coin : MonoBehaviour {
     {
         //Check if the thing we touched was the player 
         Player playerScript = collision.collider.GetComponent<Player>();
+        Player2 playerScript2 = collision.collider.GetComponent<Player2>();
 
         //If the player collides with an object or asset(s) that 
         //Have a playerscript attached to it
@@ -37,6 +38,20 @@ public class Coin : MonoBehaviour {
             // (the coin) 
 
             Destroy(gameObject);
+        }
+
+        else
+        {
+
+            if (playerScript2)
+            {
+
+                Score.scoreValue += 10;
+                // Destroy the gameObject that this script is attracted to
+                // (the coin) 
+
+                Destroy(gameObject);
+            }
         }
     }
 }
