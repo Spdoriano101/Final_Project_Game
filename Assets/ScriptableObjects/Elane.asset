@@ -8,8 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa9640b0bc4aec44bd0f0ea60a70b93, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d910cd8817d8f34787abaf54aef8852, type: 3}
   m_Name: Elane
   m_EditorClassIdentifier: 
-  characteName: Default
+  characterName: Default
   startingHp: 100
