@@ -19,6 +19,8 @@ public class Player : MonoBehaviour {
     public SpriteRenderer playerSprite;
     public Collider2D playerCollider;
 
+    public Lives livesObject;
+
     // Use this for initialization
     void Start()
     {
@@ -88,14 +90,52 @@ public class Player : MonoBehaviour {
         }
 
 
+    public void Kill()
+    {
+        //Take away a life and save that change
+        livesObject.LoseLife();
+        livesObject.saveLives();
+
+        //Check if its game over
+
+        bool gameOver = livesObject.IsGameOver();
+
+        if (gameOver == true)
+        {
+            //If it IS game over...
+            //Load the game over scene
+
+            SceneManager.LoadScene("Game_Over");
+
+        }
+
+        else
+        {
+            //try and fix this you need to try and get the game to take away a life but not reset 
+#//but still check to see if the gme is over and the get the game to reset
+
+
+        }
+
+
+        
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check the thing we bump into is an enemy
-        if (collision.collider.GetComponent<Enemy>())
+        if (collision.collider.GetComponent<EnemyScript>())
         {
             // die
             Destroy(gameObject);
         }
+
     }
 
+
+
 }
+
+
+

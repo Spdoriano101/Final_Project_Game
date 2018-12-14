@@ -7,10 +7,16 @@ public class Camera_Follow : MonoBehaviour {
 
     public Transform followTarget;
     public float cameraDistance = 30.0f;
+    public GameObject Player;
 
-
-    void Awake()
+    void Start()
     {
+        //Find the player and set player to the found player GameObject
+        Player = GameObject.Find("Player");
+
+        //store player.transform in follow target 
+        followTarget = Player.transform;
+
         GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height / 2) / cameraDistance);
     }
     // Update is called once per frame

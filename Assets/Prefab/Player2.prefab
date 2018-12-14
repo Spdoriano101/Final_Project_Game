@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4516128892995126}
   - component: {fileID: 212517210150213544}
   - component: {fileID: 50469284202682084}
-  - component: {fileID: 114530458779424378}
   - component: {fileID: 70743616295221510}
+  - component: {fileID: 114803920378143630}
   - component: {fileID: 114869086497665602}
   - component: {fileID: 95588491326777250}
   m_Layer: 0
@@ -98,7 +98,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114530458779424378
+--- !u!114 &114803920378143630
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,18 +106,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1780540419874712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16cdcbdefa9eb2145925864a33f7c6eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 44bb25cbd47a9e44199fc6a5afe1f819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 4516128892995126}
-  cameraDistance: 30
+  speed: 7
+  jumpSpeed: 10
+  physicsBody: {fileID: 50469284202682084}
+  horizontalAxis: Horizontal
+  jumpButton: Jump
+  playerAnimator: {fileID: 95588491326777250}
+  playerSprite: {fileID: 212517210150213544}
+  playerCollider: {fileID: 70743616295221510}
+  livesObject: {fileID: 0}
 --- !u!114 &114869086497665602
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780540419874712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84a3d5653ab63d45ae2ff11c385159e, type: 3}
   m_Name: 

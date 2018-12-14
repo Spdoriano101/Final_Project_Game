@@ -8,10 +8,12 @@ public class Character_Select : MonoBehaviour {
     public static int PlayerNum;
 
 
+
+
 	public void CharacterSelect (int selectedNum) {
 
         PlayerNum = selectedNum;
 
-        Application.LoadLevel("Level_1");
+        SceneManager.LoadScene("Level_1");
 	}
 }

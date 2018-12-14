@@ -11,10 +11,11 @@ public class Character_Spawner : MonoBehaviour {
     public Transform PlayerSpawnPoint;
 
     
-    void Start () {
+    void Awake () {
 
         //pulls the object from thenumber on the list and spawns it at the place and rotation that is set in the other variables.
-        Instantiate(Characters[Character_Select.PlayerNum], PlayerSpawnPoint.position, PlayerSpawnPoint.rotation);
-	}
+        GameObject newObject = Instantiate(Characters[Character_Select.PlayerNum], PlayerSpawnPoint.position, PlayerSpawnPoint.rotation);
+        newObject.name = "Player";
+    }
 	
 }
