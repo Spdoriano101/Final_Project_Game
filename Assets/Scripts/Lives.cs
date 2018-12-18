@@ -15,7 +15,7 @@ public class Lives : MonoBehaviour
     void Start()
     {
 
-        numericalLives = PlayerPrefs.GetInt("lives", 3);
+        numericalLives = PlayerPrefs.GetInt("Lives", 3);
 
         livesText.text = numericalLives.ToString();
     }
@@ -42,27 +42,27 @@ public class Lives : MonoBehaviour
     public void saveLives()
     {
 
-        PlayerPrefs.SetInt("lives", numericalLives);
+        PlayerPrefs.SetInt("Lives", numericalLives);
 
     }
 
     //Variables detect wether game is over or not by detecting if lives are <= 0
-   // public bool IsGameOver()
-  //  {
+    public bool IsGameOver()
+   {
 
-    //    if (numericalLives <= 0)
-    //    {
+       if (numericalLives <= 0)
+       {
     
-      //      return true;
+           return true;
 
-     //   }
+       }
      
-      //  else
-      //  {
+        else
+        {
 
-        //    return false;
+           return false;
 
-       // }
+        }
 
-  //  }
+    }
 }

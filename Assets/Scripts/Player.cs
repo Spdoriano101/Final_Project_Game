@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
 
     public Lives livesObject;
 
+
     // Use this for initialization
     void Start()
     {
@@ -90,48 +91,56 @@ public class Player : MonoBehaviour {
         }
 
 
-    public void Kill()
-    {
-        //Take away a life and save that change
-        livesObject.LoseLife();
-        livesObject.saveLives();
-
-        //Check if its game over
-
-        bool gameOver = livesObject.IsGameOver();
-
-        if (gameOver == true)
-        {
-            //If it IS game over...
-            //Load the game over scene
-
-            SceneManager.LoadScene("Game_Over");
-
-        }
-
-        else
-        {
-            //try and fix this you need to try and get the game to take away a life but not reset 
-#//but still check to see if the gme is over and the get the game to reset
-
-
-        }
-
-
-        
-    }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check the thing we bump into is an enemy
-        if (collision.collider.GetComponent<EnemyScript>())
+        if (collision.collider.GetComponent<Enemy>())
         {
-            // die
-            Destroy(gameObject);
-        }
+            //Take away a life and save that change
+            livesObject.LoseLife();
+            livesObject.saveLives();
 
+            //Check if its game over
+
+            bool gameOver = livesObject.IsGameOver();
+
+            if (gameOver == true)
+            {
+                //If it IS game over...
+                //Load the game over scene
+
+                SceneManager.LoadScene("Game_Over");
+
+            }
+
+            else
+            {
+                //try and fix this you need to try and get the game to take away a life but not reset 
+                //but still check to see if the gme is over and the get the game to reset
+
+
+                //If it is NOT game over...
+                //reset the current level to restart from the begining
+
+                // Reset the current level to restart from the begining.
+
+                //First, ask untiy what the current level is 
+
+
+                Scene currentLevel = SceneManager.GetActiveScene();
+
+                //Second, tell unity to load the current again
+                // by passing the build index of our level
+
+
+                SceneManager.LoadScene(currentLevel.buildIndex);
+                
+
+            }
+        }
     }
+
+
 
 
 
