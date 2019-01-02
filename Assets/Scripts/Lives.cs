@@ -7,7 +7,7 @@ public class Lives : MonoBehaviour
 {
 
     public Text livesText;
-    private int numericalLives = 3;
+    public int numericalLives = 3;
 
 
 

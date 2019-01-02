@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 
-    //Sets the variable "ScoreValue" to and integar and sets bease score to 0
+    //Sets the variable "ScoreValue" to and integar and sets base score to 0
     public static int scoreValue = 0;
         Text score; 
 
