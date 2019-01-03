@@ -2,30 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public static class GloablVariables
+{
+
+    public static bool characterChoice;
+
+}
+
 public class Elane_Button : MonoBehaviour {
-
-    public static class GloablVariables
-    {
-
-        public static bool characterChoice;
-
-    }
+   
 
     void Start()
     {
-        if (characterChoice = true)
+        if (GloablVariables.characterChoice == true)
         {
 
-            Destroy (Player)
+            Destroy(gameObject);
 
         }
 
         else
 
-        if (characterChoice = false)
+        if (GloablVariables.characterChoice == true)
         {
 
-            Destroy (Player2)
+            Destroy(gameObject);
 
         }
 

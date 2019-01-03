@@ -1072,6 +1072,11 @@ Prefab:
       propertyPath: livesObject
       value: 
       objectReference: {fileID: 1318996456}
+    - target: {fileID: 114442331362871520, guid: b1eb67634e4352047a8caa2e257896e4,
+        type: 2}
+      propertyPath: defaultCharacter
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1eb67634e4352047a8caa2e257896e4, type: 2}
   m_IsPrefabAsset: 0
@@ -9019,6 +9024,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8011399900e4a52489c533f3e6524623, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1242731191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1780540419874712, guid: 8011399900e4a52489c533f3e6524623,
+    type: 2}
+  m_PrefabInternal: {fileID: 1242731190}
+--- !u!114 &1242731192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242731191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ee49b6bbcb79f44a36d43b67d70032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318996454
 GameObject:
   m_ObjectHideFlags: 0

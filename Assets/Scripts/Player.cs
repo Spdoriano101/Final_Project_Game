@@ -14,7 +14,8 @@ public class Player : MonoBehaviour {
     public string horizontalAxis = "Horizontal";
     public string jumpButton = "Jump";
 
- 
+    //basicly if characterChoice == true, then it's selecting our character if defaultCharacter == true;
+    public bool defaultCharacter;
 
     public Animator playerAnimator;
     public SpriteRenderer playerSprite;
@@ -26,7 +27,11 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        
+        if(GloablVariables.characterChoice != defaultCharacter)
+        {
+            //it says that the characterChoice isn't our character
+            Destroy(gameObject);
+        }
     }
 
     
