@@ -22,23 +22,8 @@ public class Elane_Button : MonoBehaviour {
 
         }
 
-        else
-
-        if (GloablVariables.characterChoice == true)
-        {
-
-            Destroy(gameObject);
-
-        }
-
-
-
     }
 
  
-    
-      
-
-   
 }
 

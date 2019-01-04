@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour {
 
+    //Setting "AuidoSource" to "Coin_Pickup"
+    public AudioSource Coin_Pickup;
 
-   
+    public Score scoreObject;
 
+    public int coinValue;
 
     // Use this for initialization
     void Start()
     {
+
+        //Asking the program to then retrive the audio source file and apply it to Coin_Pickup
+        Coin_Pickup = GetComponent<AudioSource>();
+
 
     }
 
@@ -32,10 +39,15 @@ public class Coin : MonoBehaviour {
         //Have a playerscript attached to it
         if (playerScript)
         {
-            
-            Score.scoreValue += 10;
+
+           Coin_Pickup.Play();
+
+
+           Score.scoreValue += 10;
             // Destroy the gameObject that this script is attracted to
             // (the coin) 
+            
+
 
             Destroy(gameObject);
         }

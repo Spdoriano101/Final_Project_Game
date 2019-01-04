@@ -5,14 +5,17 @@ using UnityEngine;
 // Extra using statement to allow the use scene management functions
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour {
-   
+public class Player : MonoBehaviour
+{
+
     // designer variables
     public float speed = 7;
     public float jumpSpeed = 10;
     public Rigidbody2D physicsBody;
     public string horizontalAxis = "Horizontal";
     public string jumpButton = "Jump";
+
+
 
     //basicly if characterChoice == true, then it's selecting our character if defaultCharacter == true;
     public bool defaultCharacter;
@@ -27,14 +30,19 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        if(GloablVariables.characterChoice != defaultCharacter)
+        if (GloablVariables.characterChoice != defaultCharacter)
         {
             //it says that the characterChoice isn't our character
             Destroy(gameObject);
         }
+
+
+
+        ;
+
     }
 
-    
+
     void Update()
     {
 
@@ -94,7 +102,7 @@ public class Player : MonoBehaviour {
             physicsBody.velocity = velocity;
         }
 
-        }
+    }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -140,17 +148,25 @@ public class Player : MonoBehaviour {
 
 
                 SceneManager.LoadScene(currentLevel.buildIndex);
-                
+
 
             }
         }
     }
-
-
-
-
-
 }
+
+
+
+
+        
+ 
+
+
+
+  
+
+
+
 
 
 
