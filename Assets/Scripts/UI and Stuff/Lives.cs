@@ -33,6 +33,7 @@ public class Lives : MonoBehaviour
 
         livesText.text = numericalLives.ToString();
 
+       
     }
 
     public void saveLives()
