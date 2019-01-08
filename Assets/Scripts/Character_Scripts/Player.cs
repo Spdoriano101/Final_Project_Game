@@ -30,15 +30,11 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (GloablVariables.characterChoice != defaultCharacter)
+        if (Character_Button.characterChoice != name)
         {
             //it says that the characterChoice isn't our character
             Destroy(gameObject);
         }
-
-
-
-        ;
 
     }
 

@@ -1190,6 +1190,10 @@ Prefab:
       propertyPath: Coin_Pickup
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1477163548942304, guid: b1eb67634e4352047a8caa2e257896e4, type: 2}
+      propertyPath: m_Name
+      value: Elane
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1eb67634e4352047a8caa2e257896e4, type: 2}
   m_IsPrefabAsset: 0
@@ -9136,6 +9140,15 @@ Prefab:
     - target: {fileID: 4516128892995126, guid: 8011399900e4a52489c533f3e6524623, type: 2}
       propertyPath: m_RootOrder
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 114803920378143630, guid: 8011399900e4a52489c533f3e6524623,
+        type: 2}
+      propertyPath: livesObject
+      value: 
+      objectReference: {fileID: 1318996456}
+    - target: {fileID: 1780540419874712, guid: 8011399900e4a52489c533f3e6524623, type: 2}
+      propertyPath: m_Name
+      value: Dom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8011399900e4a52489c533f3e6524623, type: 2}
