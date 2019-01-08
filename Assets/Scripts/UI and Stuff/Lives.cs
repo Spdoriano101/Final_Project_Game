@@ -24,10 +24,6 @@ public class Lives : MonoBehaviour
     void Update()
     {
 
-
-
-
-
     }
 
     public void LoseLife()
