@@ -6419,9 +6419,12 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 339, y: -66.4}
   m_SizeDelta: {x: 160, y: 33.2}
 =======
+=======
+>>>>>>> parent of 53bbb32... Revert "-----"
 =======
 >>>>>>> parent of 53bbb32... Revert "-----"
   m_AnchoredPosition: {x: 222.5, y: -56.2}
