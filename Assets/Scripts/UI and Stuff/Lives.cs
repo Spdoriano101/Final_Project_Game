@@ -24,6 +24,10 @@ public class Lives : MonoBehaviour
     void Update()
     {
 
+
+
+
+
     }
 
     public void LoseLife()
@@ -33,7 +37,6 @@ public class Lives : MonoBehaviour
 
         livesText.text = numericalLives.ToString();
 
-       
     }
 
     public void saveLives()

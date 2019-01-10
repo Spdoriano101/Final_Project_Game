@@ -15,9 +15,6 @@ public class Elane_Button : MonoBehaviour {
 
     void Start()
     {
-
-        PlayerPrefs.DeleteKey("Lives");
-
         if (GloablVariables.characterChoice == true)
         {
 

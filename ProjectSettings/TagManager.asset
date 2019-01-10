@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Enemy
   - Coin
-  - Background
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - 
   - Ground
   - Coin
-  - background
+  - 
   - 
   - 
   - 
@@ -41,21 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
-    uniqueID: 774001309
-    locked: 0
   - name: Ground
     uniqueID: 511076017
     locked: 0
   - name: Player
     uniqueID: 961214675
     locked: 0
-  - name: Coin
-    uniqueID: 3409796023
-    locked: 0
   - name: Pickups
     uniqueID: 56915549
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Coin
+    uniqueID: 3409796023
     locked: 0

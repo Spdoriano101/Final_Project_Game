@@ -30,11 +30,15 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (Character_Button.characterChoice != name)
+        if (GloablVariables.characterChoice != defaultCharacter)
         {
             //it says that the characterChoice isn't our character
             Destroy(gameObject);
         }
+
+
+
+        ;
 
     }
 
@@ -110,9 +114,6 @@ public class Player : MonoBehaviour
             livesObject.LoseLife();
             livesObject.saveLives();
 
-            
-
-
             //Check if its game over
 
             bool gameOver = livesObject.IsGameOver();
@@ -139,7 +140,6 @@ public class Player : MonoBehaviour
 
                 //First, ask untiy what the current level is 
 
-                Score.scoreValue = PlayerPrefs.GetInt("score", 0);
 
                 Scene currentLevel = SceneManager.GetActiveScene();
 

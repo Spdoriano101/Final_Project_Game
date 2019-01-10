@@ -12,7 +12,7 @@ public class Camera_Follow : MonoBehaviour {
     void Start()
     {
         //Find the player and set player to the found player GameObject
-        Player = GameObject.Find(Character_Button.characterChoice);
+        Player = GameObject.Find("Player");
 
         //store player.transform in follow target 
         followTarget = Player.transform;
@@ -26,8 +26,8 @@ public class Camera_Follow : MonoBehaviour {
 
         transform.position = new Vector3(followTarget.position.x, followTarget.position.y, transform.position.z);
 
+        }
     }
- }
 
 
 
